@@ -1,9 +1,9 @@
 
 
-# Data sources # 
+# Data sources #
 
 ## 1. EU Framework Programme ##
-Dataset are provide by CORDIS 
+Dataset are provide by CORDIS
 
 below the URL for each datasets for each programme
 
@@ -31,16 +31,27 @@ https://data.europa.eu/data/datasets/cordish2020projects?locale=en
 https://data.europa.eu/data/datasets/cordis-eu-research-projects-under-horizon-europe-2021-2027?locale=en
 
 
-## 2. US National Science Foundation ## 
+## 2. US National Science Foundation ##
 
-data are provided by the Awards database 
+data are provided by the Awards database
 
 https://www.nsf.gov/awardsearch/download.jsp
 
-## 3. US National Institutes of Health  ## 
+## 3. US National Institutes of Health  ##
 
-data are provided by NIH Exporter 
+data are provided by NIH Exporter
 
 https://reporter.nih.gov/exporter
 
+## 4. UK Research and Innovation
 
+Gateway to research
+
+https://gtr.ukri.org/resources/api.html
+
+
+## 5.  ANR (FRANCE)
+
+https://anr.fr/fr/projets-finances-et-impact/jeux-de-donnees-sur-les-projets-finances/
+
+https://www.data.gouv.fr/fr/datasets/anr-01-projets-anr-dos-detail-des-projets-et-des-partenaires/

@@ -11,32 +11,30 @@ consolidating Researchers
 
 
 
+drop table if exists xgrdset_researchers_eufp; 
 
-drop table if exists xx_coredata_eufp_researchers; 
-
-create table xx_coredata_eufp_researchers
+create table xgrdset_researchers_eufp
 as 
 select 
-'FP_' || cast(proj_id as text)   as project_id
+cast('EUFP_' || trim(proj_id) as text)  as grant_id
 , NULL                      as person_id 
 , cast(pers_type as text)   as person_role 
 , cast(pi_name_first as text)       as person_name_first
 , cast(pi_name_last as text)       as person_name_last
 from 
-cordis_fp7_persons
+"cordis-fp7-persons"
 where pers_type = 'principalInvestigator'
 ;
 
-insert into xx_coredata_eufp_researchers
+insert into xgrdset_researchers_eufp
 select 
-'FP_' || cast(project_id as text)  as project_id
+cast('EUFP_' || trim(project_id) as text)  as grant_id
 , NULL                             as person_id 
 , NULL                             as person_role 
 , cast(first_name as text)        as person_name_first
 , cast(last_name  as text)        as person_name_last
 from 
-cordis_h2020_persons
+cordis_h2020_erc_pi
 ;
-
 
 
