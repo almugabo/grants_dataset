@@ -61,3 +61,18 @@ SELECT id as record_id, projectid as grant_id,  upper(doi) as pub_id_doi FROM co
 --select count(*) from xgrdset_results_publications_eufp;
 
 
+
+-- some quality assurance operations 
+-- more systematic quality checks should be performed 
+update xgrdset_results_publications_eufp set pub_id_doi = trim(pub_id_doi);
+
+update xgrdset_results_publications_eufp set pub_id_doi = trim(replace(pub_id_doi, 'HTTPS://DOI.ORG/', ''));
+update xgrdset_results_publications_eufp set pub_id_doi = trim(replace(pub_id_doi, 'DOI.ORG/', ''));
+update xgrdset_results_publications_eufp set pub_id_doi = trim(replace(pub_id_doi, 'HTTP://DX.', ''));
+
+
+update xgrdset_results_publications_eufp set pub_id_doi = '10.1002/ETT.3070' where pub_id_doi = '0.1002/ETT.3070';
+update xgrdset_results_publications_eufp set pub_id_doi = '10.1109/ISBI.2019.8759229' where pub_id_doi = '0.1109/ISBI.2019.8759229';
+update xgrdset_results_publications_eufp set pub_id_doi = '10.1145/3340964.3340990' where pub_id_doi = '0.1145/3340964.3340990';
+
+
